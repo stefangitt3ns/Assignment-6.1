@@ -86,7 +86,38 @@ namespace Assignment_6._1
 
     }
 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] nums = { 0, 1, 0, 3, 12};
 
+
+            // Moving all non-zero numbers in an array to the left of the array.
+            // Creating an int variable to keep track of the next position where a non-sero element will be placed
+            int nonZeroIndex = 0;
+
+            // Loop to move non-zero elements. 
+            for (int i = 0; i < nums.Length; i++)
+            {   // moving all non-zero elements to the left
+                if (nums[i] != 0)
+                {
+                    nums[nonZeroIndex] = nums[i];
+                    nonZeroIndex++;
+                }
+            }
+            // Step 2 : Fill the remaining postions with zeroes
+            for (int i = nonZeroIndex; i < nums.Length; i++)
+            {
+                nums[i]= 0;
+            }
+
+
+        }
+
+    }
+
+}
 
 
 
